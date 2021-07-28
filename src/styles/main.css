@@ -1,3 +1,8 @@
+:root {
+  --text-primary: #303030;
+  --button-primary: #48BE45;
+}
+
 * {
   margin: 0;
   padding: 0;
