@@ -110,7 +110,8 @@ header {
   justify-content: space-between;
 }
 
-.product-infos .product-amount span {
+.product-infos .product-amount p {
+  display: inline;
   color: var(--text-primary);
   font-weight: 500;
 }
