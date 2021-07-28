@@ -1,0 +1,9 @@
+{
+  "name": "challenge-front",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gustavopolonio/challenge-front.git",
+  "author": "Gustavo Polonio <gustavopolonio1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
