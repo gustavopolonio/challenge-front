@@ -1,15 +1,26 @@
 const express = require("express");
+const nunjucks = require("nunjucks");
 
 const server = express();
 const port = 3000;
-// server.use(express.json());
-// server.use(express.urlencoded({ extended: true }));
 
-server.use(express.static("src"));
+let json = require('../products.json');
+const products = json.cart.item;
 
-server.get("/", (request, response) => {
-  return response.render("index.html");
+nunjucks.configure("src/", {
+  noCache: true,
+  express: server
 })
+
+server.use(express.static("public/"));
+
+
+server.get("/", async (request, response) => {
+
+  return response.render("index.html", { products });
+
+})
+
 
 server.listen(port, () => {
   console.log(`Listening server on ${port}`);

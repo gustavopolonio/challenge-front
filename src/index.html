@@ -37,27 +37,34 @@
               <img src="./images/assets/user.svg" alt="user-icon" />
             </button>
   
-            <button>
+            <button id="cart-button">
               <img src="./images/assets/cart.svg" alt="cart-icon" />
             </button>
           </div>
         </div>
       </div>
 
+    </header>
+
+    <main>
       <div class="cart-container">
         <div class="product-list">
-          <div class="product">
-            <img class="product-image" src="images/products/impressora-canon-160-160.jpg" alt="" />
 
-            <div class="product-infos">
-              <p>Notebook Samsung, Intel® Core™ i7</p>
+          {% for product in products %}
+            <div class="product">
+              <img src={{ product.image }} alt={{ product.name }} />
 
-              <div class="product-amount">
-                <p>Qtd: <span id="product-amount">1</span></p>
-                <strong id="product-price">R$ 7.158,21</strong>
+              <div class="product-infos">
+                <p>{{ product.name.substring(0,35) }}...</p>
+
+                <div class="product-amount">
+                  <p>Qtd: <span>{{ product.quantity }}</span></p>
+                  <strong>{{ product.bestPriceFormated }}</strong>
+                </div>
               </div>
             </div>
-          </div>
+          {% endfor %}
+
         </div>
 
         <div class="total-amount">
@@ -68,14 +75,8 @@
           FINALIZAR COMPRA
         </button>
       </div>
-
-    </header>
-
-    <main>
-
     </main>
     
   </body>
-
-  <script src="./scripts/products.js"></script>
+  <script src="scripts/openCart.js"></script>
 </html>
