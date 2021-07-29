@@ -62,7 +62,7 @@ $ yarn start
 
 # :closed_book: Licença
 
-Esse projeto está sob a licença MIT. Veja a [license](https://github.com/gustavopolonio/challenge-front/blob/main/LICENSE) para mais informações.
+Esse projeto está sob a licença MIT. Veja a [licença](https://github.com/gustavopolonio/challenge-front/blob/master/LICENSE) para mais informações.
 
 ---
 
