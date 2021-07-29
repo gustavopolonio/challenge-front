@@ -18,7 +18,6 @@ server.use(express.static("public/"));
 server.get("/", async (request, response) => {
 
   return response.render("index.html", { products });
-
 })
 
 
