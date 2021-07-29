@@ -4,9 +4,6 @@ const nunjucks = require("nunjucks");
 const server = express();
 const port = 3000;
 
-let json = require('../products.json');
-const products = json.cart.item;
-
 nunjucks.configure("src/", {
   noCache: true,
   express: server
@@ -14,10 +11,27 @@ nunjucks.configure("src/", {
 
 server.use(express.static("public/"));
 
+var formatter = new Intl.NumberFormat('pt-BR', {
+  style: 'currency',
+  currency: 'BRL',
+});
+
+let json = require('../products.json');
+const products = json.cart.item;
+let totalAmountNotFormated = 0;
+
+for (product of products) {
+  totalAmountNotFormated += product.bestPrice;
+}
+
+const totalAmountStr = totalAmountNotFormated.toString();
+const totalAmount = totalAmountStr.substring(0, totalAmountStr.length - 2) + "." + totalAmountStr.substring(totalAmountStr.length - 2);
+const totalAmountFormated = formatter.format(totalAmount);
+
 
 server.get("/", async (request, response) => {
 
-  return response.render("index.html", { products });
+  return response.render("index.html", { products, totalAmountFormated });
 })
 
 
