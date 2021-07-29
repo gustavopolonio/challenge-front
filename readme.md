@@ -2,37 +2,71 @@
 
 # E-Plus Frontend Challenge
 
-Seja bem-vindo ao E-Plus Front-end Challenge, considere este o primeiro passo para fazer parte de uma das melhores equipes de ecommerce e marketing digital do Brasil!
+# :pushpin: Tabela de Conteúdos
 
-Para completar o desafio com sucesso você precisará codificar o layout que segue no projeto, para isso será necessário consumir um json via xhttp que retornará uma lista de produtos na resposta do request e servirá para alimentar/manipular o mini-cart.
+* [Sobre o Projeto](#book-sobre-o-projeto)
+* [Funcionalidades](#rocket-funcionalidades)
+* [Como Usar](#construction_worker-como-usar)
+* [Tecnologias](#computer-tecnologias)
+* [Licença](#closed_book-licença)
 
-Então mãos a obra e bom challenge ;)
+# :book: Sobre o Projeto
 
-## Design
+Esse é o Challenge fornecido pela [Agência E-Plus](https://www.agenciaeplus.com.br/) que tinha como objetivo desenvolver o seguinte [design](https://projects.invisionapp.com/share/NARHXUS6HCF#/screens/357617423_Eplus).
 
-- O topo apresentado deve seguir o [seguinte design](https://projects.invisionapp.com/share/NARHXUS6HCF#/357617423_Eplus)
-- Baseado neste layout, faça uma adaptação responsiva para celulares.
+Foi necessário consumir um arquivo json para manipular os items do carrinho de compras e, além do desgin para web, também era necessário fazer uma adaptação responsiva para o projeto.
 
-## Como realizar o teste
+# :rocket: Funcionalidades 
 
-- Faça um fork deste repositório em seu GitHub
-- Adicione ao Readme uma descrição de como executar seu projeto
-- Descreva as funcionalidades do seu desafio, nos conte tudo que fez! Se fez o desafio utilizando pré-processadores, por exemplo, pois usaremos estas informações para avaliá-lo. 
-- O ideal é que este challenge leve até 8h.
-- Faça commits parciais, para que possamos acompanhar o seu desenvolvimento.
-- Em caso de dúvidas, entre em contato com nadia@agenciaeplus.com.br
+Optei por fazer o projeto com HTML, CSS e Javascript, pois o layout tem apenas uma página e não há muitos dados dinâmicos. Comecei desenvolvendo o design em si, 
+dividindo a parte superior (header) e o restante (main).
 
-## Dicas
+Utilizei o [Express](https://expressjs.com/) para iniciar um servidor e instalei o [Nodemon](https://www.npmjs.com/package/nodemon) para facilitar o trabalho.
 
-- Os ícones usados, são todos do Material Design. https://material.io/icons/
-- A fonte utilizada é Montserrat (Está fonte se encontra no google fonts). 
-- Trabalhamos com clientes perfeccionistas, portanto tenha atenção com espaçamentos, tamanhos e estilos de fonte. 
+Construi a box do mini-cart, deixando-a em uma posição absoluta em relação ao main, e consumi o arquivo json para pegar a lista dos produtos que estão no mini-cart.
+Alguns dos dados da lista tiveram que ser tratados, como por exemplo o nome dos produtos no carrinho e o valor total da compra do cliente.
 
-## Critérios de avaliação
+Utilizei o Template Engine [Nunjucks](https://mozilla.github.io/nunjucks/) para conseguir trabalhar com dados dinâmicos, e preenchi dinamicamente a lista de produtos do mini-cart.
 
-- Alcançar os objetivos propostos
-- Qualidade de código
-- Commits parciais, mostrando a linha de desenvolvimento
-- Boa descrição das funcionalidades do desafio
-- Fidelidade ao design proposto
-- Adaptação mobile
+Para finalizar fiz uma adaptação responsiva, selecionando alguns breakpoints e utilizando o menu hamburguer. 
+
+O botão do mini-cart e do menu hamburguer ativam uma função toggle quando clicados, deixando os dados mais organizados.
+
+# :construction_worker: Como Usar
+
+Antes de começar, você precisa ter instalado na sua máquina: [Node](https://nodejs.org/en/download/), [Yarn](https://yarnpkg.com/) ou [NPM](https://www.npmjs.com/), [Git](https://git-scm.com/) e um editor de código (eu uso o [VSCode](https://code.visualstudio.com/)).
+
+```bash
+
+# Clone esse repositório via HTTPS:
+$ git clone https://github.com/gustavopolonio/challenge-front.git
+
+# Entre na pasta do repositório:
+$ cd challenge-front
+
+# Instale as dependências:
+$ yarn install
+
+# Inicie a aplicação num ambiente de desenvolvimento:
+$ yarn start
+
+```
+
+# :computer: Tecnologias
+
+* [Express](https://expressjs.com/)
+* [Nodemon](https://nodemon.io/)
+* [Nunjucks](https://github.com/mozilla/nunjucks)
+* [Ícones](https://material.io/icons/)
+* [VSCode](https://code.visualstudio.com/)
+
+# :closed_book: Licença
+
+Esse projeto está sob a licença MIT. Veja a [license](https://github.com/gustavopolonio/challenge-front/blob/main/LICENSE) para mais informações.
+
+---
+
+Feito com :green_heart: por [Gustavo Polonio](https://github.com/gustavopolonio) 🚀
+
+[![Linkedin Badge](https://img.shields.io/badge/-Gustavo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gustavo-polonio-04b77a169/)](https://www.linkedin.com/in/gustavo-polonio-04b77a169/)
+[![Gmail Badge](https://img.shields.io/badge/-gustavopolonio1@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:gustavopolonio1@gmail.com)](mailto:gustavopolonio1@gmail.com)
