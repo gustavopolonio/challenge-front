@@ -135,7 +135,9 @@
     left: 4.2rem;
   }
 
-  .one, .two, .three {
+  .one, 
+  .two, 
+  .three {
     height: 4px;
   }
 
@@ -153,7 +155,9 @@
     width: 24px;
   }
 
-  .one, .two, .three {
+  .one, 
+  .two, 
+  .three {
     height: 3px;
   }
 
